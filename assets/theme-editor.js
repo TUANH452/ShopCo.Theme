@@ -36,19 +36,18 @@ document.addEventListener('shopify:section:load', () => {
   }
 });
 
-document.addEventListener('shopify:section:unload', (event) => {
-  document.querySelectorAll(`[data-section="${event.detail.sectionId}"]`).forEach((element) => {
-    element.remove();
-    document.body.classList.remove('overflow-hidden');
-  });
-});
-
 document.addEventListener('shopify:section:reorder', () => hideProductModal());
 
 document.addEventListener('shopify:section:select', () => hideProductModal());
 
-document.addEventListener('shopify:section:deselect', () => hideProductModal());
+document.addEventListener('shopify:section:deselect', () => hideProductMoal());
 
 document.addEventListener('shopify:inspector:activate', () => hideProductModal());
 
 document.addEventListener('shopify:inspector:deactivate', () => hideProductModal());
+
+
+
+
+
+
